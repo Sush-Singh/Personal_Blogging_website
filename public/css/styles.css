@@ -1,0 +1,119 @@
+body{
+    background-color: #b6d4d6;
+background-image: url("https://www.transparenttextures.com/patterns/dark-dotted-2.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+.container{
+    padding: 5%;
+}
+
+/* Navigation Bar Styling */
+
+.navbar{
+    padding: 1.2% 10% 1.2%;
+    /*background-color: rgb(222, 240, 173);*/
+}
+
+.logo{
+    border: 2px solid;
+    border-color: black;
+    border-radius: 100%;
+    width: 40%;
+}
+.logo:hover{
+    border-color:#B10DC9 ;
+}
+
+.navbar-nav  li a{
+     color: black !important; 
+    font-weight: bold;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: large;
+
+}
+.navbar-nav  li a:hover {
+    color: #B10DC9 !important;
+}
+
+/* Home Page Styling */
+
+.home-container{
+    text-align: center;
+}
+.image-container{
+    /*background-color:lightsteelblue;*/
+    padding: 2% 0 0;
+}
+.intro-title{
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 5rem;
+    font-weight: normal;
+    padding: 9% 0 0;
+    
+}
+.profile-image{
+    width: 55%;
+    opacity: 93%;
+
+}
+.info-section{
+    padding: 80px 15% 30px;
+}
+h2{
+    font-size: 2.5rem;
+    color: black;
+    font-weight: normal;
+    font-family: 'Alegreya Sans', sans-serif;
+    margin: 4% 0 1%;
+}
+h6{
+    padding: 20px 0 20px;
+}
+.next-page-btn{
+    margin-bottom: 80px;
+}
+p{
+    padding: 20px 0 20px 0;
+    font-size: 1.2rem;
+}
+.blog-divison{
+    /*background-color: rgb(250, 223, 242);*/
+    padding: 20px 15% 10%;
+}
+.blog-para{
+    margin-bottom: 0;
+    text-align: left;
+}
+.blog-title{
+    text-align: left;
+    padding-top: 4px;
+}
+/* Footer Styling */
+hr{
+    margin: 0;
+    padding-bottom: 3%;
+}
+.footer {
+	text-align: center;
+	bottom: 0;
+	/*background-color: rgb(222, 240, 173);*/
+}
+
+.social-icon{
+    width: 35px;
+    margin: 0 10px 5px;
+}
+/* about page */
+.gallery{
+    padding: 10px 10px 10px 10px;
+    border-radius: 10%;
+}
+@media (max-width: 940px){
+    h1{
+        font-size: 1.8rem;
+    }
+    .intro-title{
+        font-size: 4rem;
+    }
+}

@@ -1,0 +1,70 @@
+<%- include ("partials/header"); -%>
+  <div class="home-container">
+    <div class="row image-container">
+      <div  class="col-md-6 ">
+
+        <h1 class="intro-title">I am Sushant </h1>
+        <h2>a programmer.</h2>
+          
+      </div >
+
+      <div class="col-md-6">
+
+        <img class="profile-image" src="img/sush.png" alt="Sushant Picture">
+    
+      </div>
+
+    </div>
+
+    <div class="info-section">
+      <div>
+        <h2> Hello </h2>
+          <p>
+            This is Sushant Kumar here.
+            I am a graduate in Computer Science.  
+          </p>
+
+          <h2>Did I mention my skills?</h2>
+          <p>
+            <b> I can be the CSS to your HTML.</b> <br><br>
+            I am pretty well acquainted with JAVA , JAVASCRIPT , Node.js , React.js , Express.js , MongoDB , Mongoose , RDBMS ,
+            SQL , BOOTSTRAP , HTML , CSS and Web Development , so you know that 
+            I can be a big catch! </p>
+            <h6>If you want to know more About me click on the link below</h6>
+
+          <a class="btn btn-dark next-page-btn" href="/about">About</a>
+        
+      </div>
+      <hr>
+      <div>
+        <h2> I can Help </h2>
+        <p>I could help you design websites, 
+          improve on information architecture, 
+          spice-up the Frontend and backend too.</p> <br>
+          <h6>I'm Currently Avaliable for Freelance Work.</h6>
+          <a class="btn btn-dark next-page-btn" href="/contact">Leave A Message</a>
+          
+      </div>
+    </div>
+    <div class="blog-divison">
+
+      <h2 style="margin-top: 1%;"> My Personal Blogs </h2>
+      <br>
+      <% posts.forEach(function(post) { %>
+
+        <h3 class="blog-title"> <%= post.title %> </h3>
+        <p class="blog-para"> <%= post.content.substring(0,80)+" ..." %> <a href="/posts/<%= post.title %>" > Read More</a> </p>
+        
+    <% }) %>
+    
+    </div>
+
+  </div>
+
+ 
+
+
+  <%- include ("partials/footer"); -%>
+
+
+  

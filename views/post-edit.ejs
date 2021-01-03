@@ -1,0 +1,19 @@
+<%- include ("partials/header"); -%>
+
+    <div class="container">
+        <h1>Edit Blog</h1 >
+            <br><br>
+        <form action="/admin-post/post-edit/<%= id %> " method="POST">
+            
+            <div class="form-group">
+                <label for="newTitle">Title</label>
+                <input type="text" class="form-control" value="<%= title %>" name="newTitle">
+                <label for="newContent">Post</label>
+                <textarea class="form-control"  type="text"  name="newContent" cols="100" rows="5"><%= content %></textarea>  
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>           
+        </form>       
+    </div>
+
+<%- include ("partials/footer"); -%>    
+

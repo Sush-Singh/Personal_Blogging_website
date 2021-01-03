@@ -1,0 +1,87 @@
+body{
+    /*background-color: #F4976C;*/
+    text-align: center;
+}
+
+/* Navigation Bar */
+.logo{
+    border: 2px solid;
+    border-color: #fff;
+    border-radius: 100%;
+    width: 40%;
+}
+
+/* Image Container Section */
+.image-container{
+    background-color:#3B8BEB;
+    text-align: center;
+    
+}
+h1{
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 5rem;
+    font-weight: normal;
+    padding: 9% 0 0;
+}
+.profile-image{
+    width: 50%;
+    opacity: 93%;
+}
+
+/* Information Section */
+.info-section{
+    padding: 80px 15% 30px;
+}
+h2{
+    font-size: 2.5rem;
+    color: black;
+    font-weight: normal;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+p{
+    padding: 20px 0 50px 0;
+    font-size: 1.2rem;
+}
+h6{
+    padding: 0 0 30px 0;
+}
+.next-page-btn{
+    margin-bottom: 80px;
+}
+
+/* Footer Section */
+.social-icon{
+    width: 35px;
+    margin: 0 10px;
+}
+
+ /* CSS for Work Section */
+ .work-img{
+    border-radius: 3%;    
+    width: 70%;    
+    border: 2px solid black;   
+}
+
+h3{
+    color: black;
+    font-weight: bold;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 3rem;
+    margin: 30px auto 2rem;
+    
+}
+.work-para{
+    font-weight: lighter;
+    font-size: 1.5rem;
+    padding: 4% 10% 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Media Section */
+@media(max-width:940px){
+    h1{
+        font-size: 3.5rem;
+    }
+
+}

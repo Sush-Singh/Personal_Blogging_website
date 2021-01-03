@@ -1,0 +1,34 @@
+<%- include ("partials/header"); -%>
+
+
+
+<div class="blog-divison">
+
+    <div style="text-align: right;">
+
+        <a class="btn btn-dark" href="/compose" >Create New Post</a>
+        <a href="logout" class="btn btn-dark" >LogOut</a>
+    
+    </div>
+
+    <h2 style="margin-top: 1%;">My Blogs</h2>
+    <br>
+    <% posts.forEach(function(post) { %>
+
+        <h3 class="blog-title"> <%= post.title %> </h3>
+        <p class="blog-para"> <%= post.content %>  </p>
+
+      
+        <a href="admin-post/post-edit/<%= post._id %>" class="btn btn-dark" >EDIT</a>
+    
+        <a href="post-delete/<%= post._id %>" class="btn btn-dark">DELETE</a>
+            
+        <br><br><br>
+
+      
+    <% }) %>
+
+  
+  </div>
+
+  <%- include ("partials/footer"); -%>
