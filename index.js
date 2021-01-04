@@ -115,7 +115,7 @@ app.post("/sucess",function(req,res){
 });
 
 //Single Post Section for visitors.
-app.get("/posts/:postname",function(req,res){
+app.get("/:postname",function(req,res){
 
   let requestedTitle = req.params.postname;
 

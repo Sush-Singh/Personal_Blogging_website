@@ -53,7 +53,7 @@
       <% posts.forEach(function(post) { %>
 
         <h3 class="blog-title"> <%= post.title %> </h3>
-        <p class="blog-para"> <%= post.content.substring(0,80)+" ..." %> <a href="/posts/<%= post.title %>" > Read More</a> </p>
+        <p class="blog-para"> <%= post.content.substring(0,80)+" ..." %> <a href="/<%= post.title %>" > Read More</a> </p>
         
     <% }) %>
     
