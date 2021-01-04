@@ -120,7 +120,7 @@ app.get("/:postname",function(req,res){
   let requestedTitle = req.params.postname;
 
   Post.findOne({title:requestedTitle},function(err,post){
-    res.render("Post",{
+    res.render("post",{
       title: post.title,
       content:post.content
     });
