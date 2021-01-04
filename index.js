@@ -31,27 +31,32 @@ app.use(passport.session());
 
 
 //Database Connection or Creation
-mongoose.connect("mongodb://localhost:27017/blogDB", { useNewUrlParser: true , useUnifiedTopology: true, useFindAndModify: false });
+const MONGODB_URL = 'mongodb+srv://sushant959:Roziloves959@blogdb.ttykp.mongodb.net/<dbname>?retryWrites=true&w=majority'
+mongoose.connect(MONGODB_URL || "mongodb://localhost:27017/blogDB", { useNewUrlParser: true , useUnifiedTopology: true, useFindAndModify: false });
 mongoose.set("useCreateIndex",true);
+
+mongoose.connection.on('connected',() => {
+  console.log('Mongoose Connected!!!')
+})
+const Schema = mongoose.Schema;
+
 //Schema For Post
-const postSchema =  {
+const postSchema = new Schema({
   title : String,
   content: String
-
-};
+});
+  
 
 //Schema for Admin
-const adminSchema = new mongoose.Schema({
-
+const adminSchema = new Schema({
   Username : String,
   password: String
-
 });
 
 adminSchema.plugin(passportLocalMongoose);
 
 const Post =  mongoose.model("Post",postSchema);
-const Admin = new mongoose.model("Admin",adminSchema);
+const Admin = mongoose.model("Admin",adminSchema);
 
 //Serialize or deserilize user
 
