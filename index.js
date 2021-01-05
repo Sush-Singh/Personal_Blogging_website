@@ -1,5 +1,3 @@
-//jshint esversion:6
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -31,7 +29,6 @@ app.use(passport.session());
 
 
 //Database Connection or Creation
-//const MONGODB_URL = 'mongodb+srv://sushant959:Roziloves959@blogdb.ttykp.mongodb.net/<dbname>?retryWrites=true&w=majority'
 mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost:27017/blogDB", { useNewUrlParser: true , useUnifiedTopology: true, useFindAndModify: false });
 mongoose.set("useCreateIndex",true);
 
@@ -73,20 +70,6 @@ const Admin = mongoose.model("Admin",adminSchema);
 passport.use(Admin.createStrategy());
 passport.serializeUser(Admin.serializeUser());
 passport.deserializeUser(Admin.deserializeUser());
-
-//Admin Registration(you just have to do the admin registration once after that you can remove this code.)
-
-// Admin.register({username: "sushant959"},"Sushant959@",function(err,admin){
-//   if(err){
-//     console.log(err);
-//     res.redirect("/");
-//   }else{
-//     passport.authenticate("local")(req,res,function(){
-//       res.redirect("/admin-post");
-//     });
-//   }
-// });
-
 
 //Home Page Section
 app.get("/",function(req,res){
@@ -146,7 +129,7 @@ app.post("/contact",function(req,res){
   });
   
   var mailOptions = {
-    //from: req.body.email,
+    from: req.body.email,
     to: 'sushantkumarsingh098@gmail.com',
     subject: req.body.name,
     html: `<p>${req.body.name}</p>
