@@ -31,8 +31,8 @@ app.use(passport.session());
 
 
 //Database Connection or Creation
-const MONGODB_URL = 'mongodb+srv://sushant959:Roziloves959@blogdb.ttykp.mongodb.net/<dbname>?retryWrites=true&w=majority'
-mongoose.connect(MONGODB_URL || "mongodb://localhost:27017/blogDB", { useNewUrlParser: true , useUnifiedTopology: true, useFindAndModify: false });
+//const MONGODB_URL = 'mongodb+srv://sushant959:Roziloves959@blogdb.ttykp.mongodb.net/<dbname>?retryWrites=true&w=majority'
+mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost:27017/blogDB", { useNewUrlParser: true , useUnifiedTopology: true, useFindAndModify: false });
 mongoose.set("useCreateIndex",true);
 
 mongoose.connection.on('connected',() => {
@@ -115,7 +115,7 @@ app.post("/sucess",function(req,res){
 });
 
 //Single Post Section for visitors.
-app.get("/:postname",function(req,res){
+app.get("/posts/:postname",function(req,res){
 
   let requestedTitle = req.params.postname;
 
