@@ -1,3 +1,5 @@
+//jshint esversion:6
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -70,6 +72,20 @@ const Admin = mongoose.model("Admin",adminSchema);
 passport.use(Admin.createStrategy());
 passport.serializeUser(Admin.serializeUser());
 passport.deserializeUser(Admin.deserializeUser());
+
+//Admin Registration(you just have to do the admin registration once after that you can remove this code.)
+
+// Admin.register({username: "sushant959"},"Sushant959@",function(err,admin){
+//   if(err){
+//     console.log(err);
+//     res.redirect("/");
+//   }else{
+//     passport.authenticate("local")(req,res,function(){
+//       res.redirect("/admin-post");
+//     });
+//   }
+// });
+
 
 //Home Page Section
 app.get("/",function(req,res){
@@ -265,7 +281,7 @@ req.login(admin , function(err){
 })
 });
 
-//Admin LogOut ection
+//Admin LogOut section
 app.get("/logout",function(req,res){
   req.logout();
   res.redirect("/");
